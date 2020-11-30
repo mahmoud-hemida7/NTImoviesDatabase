@@ -1,0 +1,20 @@
+<div class=" row my-5">
+    <div class=" col-md-4 my-5">
+        <img [src]="imgBaseUrl+trendingTvshow.poster_path" class=" img-fluid">
+    </div>
+    <div class="col-md-8 my-5">
+        <div class="tvDetails">
+            <h1 >{{trendingTvshow.original_name}}</h1>
+            <p class=" my-4">{{trendingTvshow.overview}}</p>
+            <div class="extra_details my-5">
+                <div class=" my-4"><i class="fas fa-heart heart">&nbsp;&nbsp;&nbsp;</i>{{trendingTvshow.vote_count}}</div>
+                <div class=" my-4">Release Date &nbsp;&nbsp;  {{trendingTvshow.first_air_date}}</div>
+                <div  class=" my-4"> <a target=" _blank" href="https://www.imdb.com/" class="btn imdb  btn-lg active" role="button" aria-pressed="true">IMDb</a> &nbsp;&nbsp;&nbsp;  {{trendingTvshow.vote_average}} &nbsp; <span class="star"><i class="fas fa-star"></i></span></div>
+                <span class="mr-2 p-2 bg-info rounded" *ngFor ="let gen of trendingTvshow.genres">{{gen.name}}</span>
+                <div class=" my-5">
+                    <button class=" btn btn-outline-info" ><a href="https://rarbg.to/index70.php" target="_blank" class=" text-decoration-none text-white" > Download form RARBG</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

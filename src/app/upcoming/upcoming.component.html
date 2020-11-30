@@ -1,0 +1,16 @@
+<section class="tvshows my-5 py-2">
+    <h1 class=" text-center"> Upcoming Movies List</h1>
+    <div class="row">
+    <div *ngFor="let movie of upcomingMovies" class="col-md-4 col-sm-6 my-4">
+        <div class="movie">
+                <img  class=" img-fluid"  [src]="imgBaseUrl+movie.poster_path">
+                <div class="movie-info ">
+                    <h2 class=" my-5 text-center">{{movie.title}}</h2>
+                    <p class="parg text-left" >{{movie.overview}}</p>  
+                    <button routerLink="/movieDetails/movie/{{movie.id}}" class=" btn badge-info ">See More</button>
+                </div>
+                <span class="vote">{{movie.vote_average}}</span>      
+        </div>
+    </div>
+    </div>
+</section>

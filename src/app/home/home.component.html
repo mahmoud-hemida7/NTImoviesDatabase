@@ -1,0 +1,57 @@
+<section >
+    <h1 class=" text-capitalize text-center my-5 py-3 ">welcome to movies database</h1>
+    <p class=" text-center w-100">Here you can browse and know everything about new movies or series once you <span class=" text-success">login</span> !!</p>
+
+    <div class=" text-center">
+        <button *ngIf="!_AuthService.islogedin()" (click)="goToLogin()"  type="button" class=" border-0 btn btn-outline-primary mx-5">Have Account</button>
+        <button *ngIf="!_AuthService.islogedin()" (click)="goToRegister()"  type="button" class=" border-0 btn btn-outline-primary mx-5">Don't Have Account</button>  
+    </div>
+    <div class="row">
+        <div *ngFor="let movie of lastMovies" class="col-md-3 col-sm-6 my-4">
+            <div class="movie">
+                    <img  class=" img-fluid"  [src]="imgBaseUrl+movie.poster_path">
+                    <div class="movie-info ">
+                        <h2 class=" my-5 text-center">{{movie.title}}</h2>
+                        
+                        <button routerLink="/movies" class=" btn badge-info ">See More</button>
+                    </div>
+                    <span class="vote">{{movie.vote_average}}</span>      
+            </div>
+        </div>
+        <div *ngFor="let tv of lastSeries" class="col-md-3 col-sm-6 my-4">
+            <div class="movie">
+                    <img  class=" img-fluid"  [src]="imgBaseUrl+tv.poster_path">
+                    <div class="movie-info ">
+                        <h2 class=" my-5 text-center">{{tv.name}}</h2>
+                         
+                        <button routerLink="/tvshows" class=" btn badge-info ">See More</button>
+                    </div>
+                    <span class="vote">{{tv.vote_average}}</span>      
+            </div>
+        </div>
+        <div *ngFor="let topRated of topRatedMovies" class="col-md-3 col-sm-6 my-4">
+            <div class="movie">
+                    <img  class=" img-fluid"  [src]="imgBaseUrl+topRated.poster_path">
+                    <div class="movie-info ">
+                        <h2 class=" my-5 text-center">{{topRated.title}}</h2> 
+                        <button routerLink="/topRated" class=" btn badge-info ">See More</button>
+                    </div>
+                    <span class="vote">{{topRated.vote_average}}</span>      
+            </div>
+        </div>
+        <div *ngFor="let upcoming of upcomingMovies" class="col-md-3 col-sm-6 my-4">
+            <div class="movie">
+                    <img  class=" img-fluid"  [src]="imgBaseUrl+upcoming.poster_path">
+                    <div class="movie-info ">
+                        <h2 class=" my-5 text-center">{{upcoming.title}}</h2> 
+                        
+                        <button routerLink="/upcoming" class=" btn badge-info ">See More</button>
+                    </div>
+                    <span class="vote">{{upcoming.vote_average}}</span>      
+            </div>
+        </div>
+
+
+    </div>
+
+</section>

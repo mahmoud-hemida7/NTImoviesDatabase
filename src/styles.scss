@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+$bgColor:#131722;
+$fontColor:#fff;
+$scondFontColor:#949cb0;
+$fontfamily:'segoe ui light';
+
+body{
+    background-color: $bgColor;
+    color: $fontColor;
+    font-family: $fontfamily;
+    box-sizing: border-box;
+    
+}
+
+
+

@@ -1,0 +1,25 @@
+<section class="tvshows my-5 py-2">
+    <h1 class=" text-center">Tvshows List</h1>
+    <div class="row">
+        <div *ngFor="let tv of trndingTvShow" class="col-md-6 my-4">
+            <div class="tvShow">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class=" img-fluid" [src]="imgBaseUrl+tv.poster_path">
+                    </div>
+                    <div class="col-md-6 position-relative ">
+                        <div class="tv-info ">
+                            <h2 class=" my-5 text-center">{{tv.name}}</h2>
+                            <p class="parg" >{{tv.overview}}</p>
+                            
+                        </div>
+                        <span class="vote">{{tv.vote_average}}</span>
+                        <button routerLink="/tvshowDetails/{{tv.media_type}}/{{tv.id}}" class=" m-2 btn badge-info">See More</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

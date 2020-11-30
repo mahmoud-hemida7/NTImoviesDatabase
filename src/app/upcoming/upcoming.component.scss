@@ -1,0 +1,115 @@
+
+p {
+    font-size: 1rem;
+    color: #ccc;
+    width: 650px;
+    margin: 0 auto;
+    line-height: 21px;
+    margin-bottom: 30px;
+}
+.movie{
+    box-shadow: 0 0 10px #09c;
+    min-height: 383px;
+    
+}
+
+.vote{
+    position: absolute;
+    top: 0;
+    right: 35px;
+    padding: 10px;
+    background-color: #09c;
+}
+.movie{
+    box-shadow: 0 0 10px #09c;
+    min-height: 383px;
+    
+}
+
+.vote{
+    position: absolute;
+    top: -100px;
+    right: 35px;
+    padding: 10px;
+    background-color: #09c;
+    transition:all 1s;
+}
+.movie:hover .vote{
+top: 0;
+}
+//////////////////////
+.movie{
+    background-color: gray;
+
+    position: relative;
+    text-align: center;
+    color:#fff;
+    border:3px solid #fff;
+    overflow: hidden;
+    float: left;
+    
+}
+.movie-info{
+   
+    background-color: rgba(42,63,85,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    transition:all 1s;
+ 
+}
+.movie:hover .movie-info{
+    opacity: 1;
+    transform: rotate(360deg);
+ }
+ .movie h2 {
+    background-color: #2A3F55;
+    padding: 15px;
+    position: relative;
+    left:200%;
+    top:0;
+    transition:all 1s;
+    transition-delay: 1s;
+}
+.movie:hover h2 {
+    left:0
+}
+.movie h3 {
+
+    padding: 15px;
+    position: relative;
+    left:200%;
+    top:0;
+    transition:all 1s;
+    transition-delay: 1.3s;
+}
+.movie:hover h3 {
+    left:0
+}
+.movie p{
+    font-size:18px;
+
+    line-height: 30px;
+    position: relative;
+    left:200%;
+    top:0;
+    transition: all 1s;
+    transition-delay: 1.5s;
+}
+.movie:hover p{
+    left:0
+}
+
+.movie button{
+    position: relative;
+    left:110%;
+    top:0;
+    transition:all 1s;
+    transition-delay: 2s;
+}
+.movie:hover button{
+    left:0
+}

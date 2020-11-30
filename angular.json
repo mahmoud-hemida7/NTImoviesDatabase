@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "last-session"
+    }
+  },
+  "defaultProject": "last-session",
+  "cli": {
+    "analytics": "e7d40fdf-031d-49e6-b031-a830991cba28"
+  }
 }
