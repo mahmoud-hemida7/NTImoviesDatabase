@@ -10,6 +10,8 @@ import { MoviesService } from '../movies.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent implements OnInit {
   goToRegister(){
     this._Router.navigateByUrl("/register")
@@ -18,6 +20,10 @@ export class HomeComponent implements OnInit {
     this._Router.navigateByUrl("/login")
   }
 
+
+
+
+  /////////////////////////////////////////////
   lastMovies:any[]=[];
   lastSeries:any[]=[];
   upcomingMovies:any[]=[];
@@ -46,3 +52,5 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+

@@ -10,7 +10,7 @@ import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MoviesDetailsComponent } from './movies-details/movies-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { HttpClientModule } from '@angular/common/http'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TvshowDetailsComponent } from './tvshow-details/tvshow-details.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
+
 
 
 @NgModule({
@@ -34,10 +35,12 @@ import { TopRatedComponent } from './top-rated/top-rated.component';
     TvshowDetailsComponent,
     UpcomingComponent,
     TopRatedComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,

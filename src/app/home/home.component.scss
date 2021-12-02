@@ -1,4 +1,18 @@
 
+    .is-done {
+        text-decoration: line-through;
+      }
+
+      .like-button, .dislike-button {
+        font-size: 1rem;
+        padding: 5px 10px;
+        color:   #585858;
+    }
+    .liked, .disliked {
+        font-weight: bold;
+        color: #1565c0;
+    }
+
 
 h1{
     font-size: 3.5rem;
